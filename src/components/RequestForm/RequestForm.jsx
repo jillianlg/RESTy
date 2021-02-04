@@ -30,6 +30,10 @@ const RequestForm = ({ url, method, onSubmit, onChange }) => {
           onChange={onChange} /> 
         <label htmlFor="patch">PATCH</label>
         {/* DELETE method */}
+        <input type="radio" id="delete" name="method" value="DELETE"
+          checked={method === 'DELETE'}
+          onChange={onChange} />
+        <label htmlFor="delete">DELETE</label>
       </div>
     </div>
 
