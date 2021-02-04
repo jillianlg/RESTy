@@ -35,6 +35,7 @@ const RequestForm = ({ url, method, onSubmit, onChange }) => {
           onChange={onChange} />
         <label htmlFor="delete">DELETE</label>
       </div>
+      <button>Submit</button>
     </div>
 
   );
