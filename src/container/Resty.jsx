@@ -11,6 +11,11 @@ export default class Resty extends Component {
     history: [],
     display: { 'Hello': 'Make a fetch and see it here!' }
   }
+
+  handleChange = ({ target }) => {
+    this.setState({ [target.name]: target.value });
+  }
+
   render(){
     const { url, method, body, display, history } = this.state;
 
