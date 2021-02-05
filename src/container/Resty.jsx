@@ -17,6 +17,28 @@ export default class Resty extends Component {
     this.setState({ [target.name]: target.value });
   }
 
+  handleSubmit = event => {
+    const { history, url, method } = this.state;
+    const key = `${url}+${method}`;
+    
+    event.preventDefault();
+    this.fetch();
+    
+    if(history.filter(item => item.key === key).length > 0 || method === '') return;
+    this.setState(state => ({
+      history: [...state.history, {
+        url: state.url,
+        method: state.method,
+        body: state.body,
+        key: `${state.url}+${state.method}`
+      }]
+    }));
+
+    this.setState(state => {
+      localStorage.setItem('history', JSON.stringify(state.history));
+    });
+  }
+
   fetch = () => {
     const { url, method, body } = this.state;
     return fetchApi(url, method, body)

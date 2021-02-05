@@ -4,12 +4,14 @@ import user from '@testing-library/user-event';
 import Resty from './Resty';
 
 describe('Resty container', () => {
-  render(<Resty />);
+  it('takes in and display a URL', () => {
+    render(<Resty />);
 
-  const urlInput = screen.getByPlaceholderText('URL');
-  user.type(urlInput, 'https://jsonplaceholder.typicode.com/todos/1');
-
-  return waitFor(() => {
-    expect(screen.getByTestId('response')).not.toBeEmptyDOMElement;
+    const urlInput = screen.getByPlaceholderText('URL');
+    user.type(urlInput, 'https://jsonplaceholder.typicode.com/todos/1');
+  
+    return waitFor(() => {
+      expect(screen.getByTestId('response')).not.toBeEmptyDOMElement;
+    });
   });
 });

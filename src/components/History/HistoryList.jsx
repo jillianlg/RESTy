@@ -8,7 +8,7 @@ const HistoryList = ({ history }) => {
 
   const historyElements = history.map((item, i) => {
     return (
-      <li key={`${item.method}+${item.url}`}>
+      <li key={`${item.method}+${item.url}`} >
         <HistoryItem method={item.method} url={item.url} id={i} />
       </li>
     );

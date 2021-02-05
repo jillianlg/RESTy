@@ -8,6 +8,7 @@ describe('HistoryList component', () => {
     const { asFragment } = render(
       <HistoryList
         history={[]}
+        onClick={jest.fn()}
       />);
     expect(asFragment()).toMatchSnapshot();
   });
