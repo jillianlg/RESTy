@@ -4,6 +4,7 @@ exports[`ResponseDisplay component renders a response in the display 1`] = `
 <DocumentFragment>
   <pre
     class="ResponseDisplay"
+    data-testid="response"
   >
     <div
       class="react-json-view"
@@ -69,7 +70,7 @@ exports[`ResponseDisplay component renders a response in the display 1`] = `
                 <span
                   style="display: inline-block; cursor: pointer; font-weight: bold; color: rgb(0, 43, 54);"
                 >
-                  {
+                  [
                 </span>
               </span>
             </span>
@@ -79,7 +80,7 @@ exports[`ResponseDisplay component renders a response in the display 1`] = `
               <span
                 style="display: inline-block; cursor: pointer; font-weight: bold; color: rgb(0, 43, 54); padding-left: 0px;"
               >
-                }
+                ]
               </span>
               <div
                 class="object-meta-data"

@@ -16,7 +16,7 @@ export default class Resty extends Component {
 
     return (
       <>
-        <HistoryList history={history} onClick={this.handleClick} />
+        <HistoryList history={history} />
         <RequestForm 
           url={url} 
           method={method} 

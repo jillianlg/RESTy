@@ -11,11 +11,12 @@ exports[`RequestForm component renders request in the form 1`] = `
         name="url"
         placeholder="URL"
         type="text"
-        value=""
+        value="http://"
       />
       <section>
         <div>
           <input
+            checked=""
             id="get"
             name="method"
             type="radio"
@@ -78,7 +79,9 @@ exports[`RequestForm component renders request in the form 1`] = `
       <textarea
         name="body"
         placeholder="Raw JSON Body"
-      />
+      >
+        {}
+      </textarea>
     </form>
   </div>
 </DocumentFragment>

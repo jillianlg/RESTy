@@ -8,7 +8,7 @@ describe('ResponseDisplay component', () => {
   it('renders a response in the display', () => {
     const { asFragment } = render(
       <ResponseDisplay
-        onChange={jest.fn()}
+        display={[]}
       />
     );
     expect(asFragment()).toMatchSnapshot();

@@ -5,7 +5,7 @@ import styles from './ResponseDisplay.css';
 
 const ResponseDisplay = ({ display }) => {
   return (
-    <pre className={styles.ResponseDisplay} >
+    <pre data-testid="response" className={styles.ResponseDisplay} >
       <ReactJson src={display} displayDataTypes={false} />
     </pre>
   );

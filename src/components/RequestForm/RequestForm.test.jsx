@@ -8,6 +8,10 @@ describe('RequestForm component', () => {
   it('renders request in the form', () => {
     const { asFragment } = render(
       <RequestForm
+        url="http://"
+        method="GET"
+        body="{}"
+        onSubmit={jest.fn()}
         onChange={jest.fn()}
       />
     );
