@@ -51,7 +51,6 @@ const RequestForm = ({ url, method, body, onSubmit, onChange }) => {
   );
 };
 
-
 RequestForm.propTypes = {
   url: PropTypes.string.isRequired,
   method: PropTypes.string.isRequired,
