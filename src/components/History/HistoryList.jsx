@@ -5,21 +5,11 @@ import HistoryItem from './HistoryItem';
 import styles from './HistoryList.css';
 
 const HistoryList = ({ history, onClick }) => {
-  const testHistory = [
-    {
-      method: 'get',
-      url: 'test.com'
-    },
-    {
-      method: 'put',
-      url: 'test2.com'
-    }
-  ];
 
-  const historyElements = testHistory.map((item) => {
+  const historyElements = history.map((item, i) => {
     return (
       <li key={`${item.method}+${item.url}`} onClick={onClick}>
-        <HistoryItem method={item.method} url={item.url} id={`${item.url}+${item.method}`} />
+        <HistoryItem method={item.method} url={item.url} id={i} />
       </li>
     );
   });
