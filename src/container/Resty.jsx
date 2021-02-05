@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HistoryList from '../components/History/HistoryList';
 import RequestForm from '../components/RequestForm/RequestForm';
 import ResponseDisplay from '../components/ResponseDisplay/ResponseDisplay';
+import { fetchApi } from '../services/fetchApi';
 
 export default class Resty extends Component {
   state ={
@@ -14,6 +15,12 @@ export default class Resty extends Component {
 
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
+  }
+
+  fetch = () => {
+    const { url, method, body } = this.state;
+    return fetchApi(url, method, body)
+      .then(res => this.setState({ display: res }));
   }
 
   render(){
