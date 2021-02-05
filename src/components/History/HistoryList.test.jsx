@@ -2,9 +2,9 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import HistoryList from './HistoryList';
 
-describe('HistoryItem component', () => {
+describe('HistoryList component', () => {
   afterEach(() => cleanup());
-  it('renders a history item', () => {
+  it('renders a history list', () => {
     const { asFragment } = render(
       <HistoryList
         history={[]}

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HistoryItem component renders a history item 1`] = `
+exports[`HistoryList component renders a history list 1`] = `
 <DocumentFragment>
   <ul
     class="History"
