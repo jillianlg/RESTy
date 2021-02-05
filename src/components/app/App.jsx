@@ -9,7 +9,7 @@ export default function App() {
       <RequestForm />
       <ResponseDisplay />
       <HistoryList 
-        history = {[{ url:'www.url.com', method:'GET' }]}
+        // history = {[{ url:'www.url.com', method:'GET' }]}
       />
 
     </>
