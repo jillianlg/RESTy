@@ -1,12 +1,13 @@
 import React from 'react';
 
-const HistoryItem = ({}) => {
+const HistoryItem = ({ id, method, url }) => {
   return (
-    <article id={id}>
-      <p id={id}>{method}</p>
-      <span id={id}>{url}</span>
-    </article>
-  )
-}
+    <ul key={id}>
+      <p key={id}>{method}</p>
+      <span key={id}>{url}</span>
+    </ul>
+  );
+};
 
 export default HistoryItem;
+
