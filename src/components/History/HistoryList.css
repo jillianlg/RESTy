@@ -1,7 +1,7 @@
 .History{
   width: 17.5vw;
   margin: 2px;
-  display: flex;
+  display:flex;
   flex-direction: column;
 
   li{

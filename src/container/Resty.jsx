@@ -24,6 +24,7 @@ export default class Resty extends Component {
     event.preventDefault();
     this.fetch();
     
+    // eslint-disable-next-line max-len
     if(history.filter(item => item.key === key).length > 0 || method === '') return;
     this.setState(state => ({
       history: [...state.history, {
