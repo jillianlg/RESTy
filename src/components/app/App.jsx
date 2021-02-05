@@ -4,5 +4,5 @@ import ResponseDisplay from '../ResponseDisplay/ResponseDisplay';
 
 export default function App() {
   // return <RequestForm />;
-  return <ResponseDisplay />;
+  return <HistoryItem />;
 }
